@@ -49,5 +49,10 @@ public class InteractiveWorld : ModuleRules
 				// ... add any modules that your module loads dynamically here ...
 			}
 			);
+	           		// Conditionally include 'MessageLog' only when building for the editor
+	        		if (Target.bBuildEditor)
+	        		{
+	            			PrivateDependencyModuleNames.Add("MessageLog");
+	        		}
 	}
 }
