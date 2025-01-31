@@ -1,6 +1,7 @@
 // Copyright 2023 Sun BoHeng
 
 #include "WorldInteractVolume.h"
+#include "TimerManager.h"
 #include "InteractBrush.h"
 #include "WorldDrawingBoard.h"
 #include "Components/BrushComponent.h"
@@ -21,7 +22,9 @@ void AWorldInteractVolume::BeginPlay()
  //I don't know why there are Error when I use TActor Type  TActorIterator<AWorldDrawingBoard>.S
  //'TActorIterator<AWorldDrawingBoard>' is incomplete,why???
  TArray<AActor*> FindDrawingBoards;
- UGameplayStatics::GetAllActorsOfClass(GetWorld(),AWorldDrawingBoard::StaticClass(),FindDrawingBoards);
+  //UGameplayStatics::GetAllActorsOfClass(GetWorld(),AWorldDrawingBoard::StaticClass(),FindDrawingBoards);
+UGameplayStatics::GetAllActorsOfClass(this, AWorldDrawingBoard::StaticClass(), FindDrawingBoards);
+
  for (const auto FindActor : FindDrawingBoards)
  {
   if (Cast<AWorldDrawingBoard>(FindActor)->GetUseInteractVolume()&&Cast<AWorldDrawingBoard>(FindActor)->GetInteractVolumes().Find(this) != -1)
