@@ -87,7 +87,9 @@ bool UInteractiveWorldSubsystem::PrepareBrushes(TArray<UInteractBrush*>& Brushes
 	else
 	{
 		//Use distance culling
-		const FVector CameraLocation = UGameplayStatics::GetPlayerCameraManager(GetWorld(), 0)->GetCameraLocation();
+		//const FVector CameraLocation = UGameplayStatics::GetPlayerCameraManager(GetWorld(), 0)->GetCameraLocation();
+		const FVector CameraLocation = UGameplayStatics::GetPlayerCameraManager(this, 0)->GetCameraLocation();
+
 		for (auto Brush : Brushes)
 		{
 			if (Brush)
