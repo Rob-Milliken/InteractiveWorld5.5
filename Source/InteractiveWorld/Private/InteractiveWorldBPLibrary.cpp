@@ -2,6 +2,9 @@
 
 #include "InteractiveWorldBPLibrary.h"
 #include "Engine/TextureRenderTarget2D.h"
+#include "Logging/MessageLog.h"          // For FMessageLog
+#include "Misc/MessageDialog.h"          // For FMessageDialog
+#include "Logging/TokenizedMessage.h"    // For FTokenizedMessage
 
 UInteractiveWorldBPLibrary::UInteractiveWorldBPLibrary(const FObjectInitializer& ObjectInitializer)
 : Super(ObjectInitializer)
