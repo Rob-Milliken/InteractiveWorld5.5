@@ -3,8 +3,9 @@
 
 ## About this plugin
 Developed for: Unreal Engine
+Updated for a more recent engine. Except for fixes, no new functionality or optimization is inferred.
 
-Supported Engine Versions: UE5.0, UE5.1
+Supported Engine Versions: This version was updated specifically for 5.5 - I have not back tested - Rob Milliken
 
 Development Platforms: (Win64)
 
